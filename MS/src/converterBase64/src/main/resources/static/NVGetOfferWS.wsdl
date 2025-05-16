@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions targetNamespace="http://siebel.com/CustomUI" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://siebel.com/CustomUI" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.gvt.com.br/siebel/asset" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://siebel.com/CustomUI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdLocal1="http://www.gvt.com.br/siebel/asset">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="GetOfferIn" type="xsdLocal1:GetOfferInData"/>
+      <xsd:complexType name="GetOfferInTopElmtData">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="1" name="GetOfferIn" type="xsdLocal1:GetOfferInData"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetOfferInData">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="InvoiceProfile" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Id" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="IntegrationId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="InvoiceProfileId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="AccountId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="AccountIntegrationId" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://siebel.com/CustomUI" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://siebel.com/CustomUI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdLocal1="http://www.gvt.com.br/siebel/asset">
+      <xsd:import namespace="http://www.gvt.com.br/siebel/asset"/>
+      <xsd:element name="NVGetOfferWS_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal1:GetOfferIn"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NVGetOfferWS_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal1:ListOfNvGetOfferOut"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.gvt.com.br/siebel/asset" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://siebel.com/CustomUI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdLocal1="http://www.gvt.com.br/siebel/asset" xmlns:xsdLocal2="http://www.gvt.com.br/siebel/asset">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfNvGetOfferOut" type="xsdLocal2:ListOfNvGetOfferOutData"/>
+      <xsd:complexType name="ListOfNvGetOfferOutTopElmtData">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="1" name="ListOfNvGetOfferOut" type="xsdLocal2:ListOfNvGetOfferOutData"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfNvGetOfferOutData">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="GetOfferOutv2" type="xsdLocal2:GetOfferOutv2Data"/>
+        </xsd:sequence>
+        <xsd:attribute name="lastpage" type="xsd:boolean"/>
+        <xsd:attribute name="recordcount" type="xsd:integer"/>
+      </xsd:complexType>
+      <xsd:complexType name="GetOfferOutv2Data">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Offerv2" type="xsdLocal2:Offerv2Data"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Offerv2Data">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="InstallDate" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="DisconnectionDate" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Id" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="IntegrationId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ParentAssetId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ProductName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ProductType" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="RootAssetId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="RootIntegrationId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ServiceId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Status" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="AccountIntegrationId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="OwnerAccountId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="NomeExibicaoProduto" type="xsd:string"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="HeaderAssetv2" type="xsdLocal2:HeaderAssetv2Data"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HeaderAssetv2Data">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Id" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="IntegrationId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Name" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="OriginalOrderId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ParentAssetId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ProductName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ServiceId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Status" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="InstallDate" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="DisconnectionDate" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="LineItemv2" type="xsdLocal2:LineItemv2Data"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LineItemv2Data">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Id" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="IntegrationId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Name" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="OriginalOrderId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ParentAssetId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ProductName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ServiceId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Status" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CoveredProduct" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="NomeExibicaoProduto" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ListOfProductLine" type="xsdLocal2:ListOfProductLineData"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="InstallDate" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="DisconnectionDate" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="RelationshipName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentContractId" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentContractName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentLength" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentUnitOfMeasureCd" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentChargeAmount" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentActionCode" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentStartDate" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CommitmentEndDate" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfProductLineData">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="ProductLinev2" type="xsdLocal2:ProductLinev2Data"/>
+        </xsd:sequence>
+        <xsd:attribute name="lastpage" type="xsd:boolean"/>
+        <xsd:attribute name="recordcount" type="xsd:integer"/>
+      </xsd:complexType>
+      <xsd:complexType name="ProductLinev2Data">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Name" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="NVGetOfferWS_Input">
+    <WL5G3N0:part element="WL5G3N1:NVGetOfferWS_Input" name="NVGetOfferWS_Input"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NVGetOfferWS_Output">
+    <WL5G3N0:part element="WL5G3N1:NVGetOfferWS_Output" name="NVGetOfferWS_Output"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="NVGetOfferWS">
+    <WL5G3N0:operation name="NVGetOfferWS">
+      <WL5G3N0:input message="WL5G3N1:NVGetOfferWS_Input"/>
+      <WL5G3N0:output message="WL5G3N1:NVGetOfferWS_Output"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="NVGetOfferWS" type="WL5G3N1:NVGetOfferWS">
+    <WL5G3N2:binding style="document" transport="http://www.bea.com/transport/2007/05/local"/>
+    <WL5G3N0:operation name="NVGetOfferWS">
+      <WL5G3N2:operation soapAction="document/http://siebel.com/CustomUI:NVGetOfferWS"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="NVGetOfferWS">
+    <WL5G3N0:port binding="WL5G3N1:NVGetOfferWS" name="NVGetOfferWS">
+      <WL5G3N2:address location="local:ApplicationServices/Siebel/NVGetOfferWS/v1/Proxy/NVGetOfferWS"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

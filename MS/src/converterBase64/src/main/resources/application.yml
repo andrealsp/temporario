@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ${APPLICATION_NAME:converter-base-64}
+
+server:
+  servlet:
+    context-path: "/${APPLICATION_PREFIX:converterManagement/v1}"
+
+##LOG
+logging:
+  file:
+    path: "${LOG_PATH:/tmp/logs}"
+
+##HEALTHCHECK
+management:
+  endpoints:
+    web:
+      base-path: "/"
+      path-mapping:
+        health: "healthcheck"
